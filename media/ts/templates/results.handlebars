@@ -1,0 +1,26 @@
+<header>
+	<span class="euroJackpot--color">EuroJackpot</span>
+	<span class="date">{{date.full}}</span>	
+</header>
+<section>
+	<ul class="euroJackpot__balls">
+		{{#each numbers as |number|}}
+			<li>{{number}}</li>
+		{{/each}}
+		{{#each euroNumbers as |number|}}
+			<li class="special">{{number}}</li>
+		{{/each}}
+	</ul>
+
+	<table class="euroJackpot__tiers">
+		<tbody>
+			{{#each oddsSorted as |value|}}
+				<tr>
+					<td><span class="euroJackpot__tier">{{value.title}}</span></td>
+					<td><span class="euroJackpot__winner">{{value.winners}}</span></td>
+					<td><span class="euroJackpot__prize">{{value.prize}}</span></td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</section>
