@@ -12,7 +12,14 @@
 		{{/each}}
 	</ul>
 
-	<table class="euroJackpot__tiers">
+	<table class="euroJackpot__tiers" cellspacing="0" cellpadding="0">
+		<thead>
+			<tr>
+				<th>Tier</th>
+				<th>Winners</th>
+				<th>Prize</th>
+			</tr>
+		</thead>
 		<tbody>
 			{{#each oddsSorted as |value|}}
 				<tr>
