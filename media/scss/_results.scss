@@ -1,0 +1,129 @@
+@import 'vendor/normalize';
+@import 'bourbon/bourbon';
+
+$base-spacing: 24px;
+$small-spacing: $base-spacing / 2;
+$color-EuroJacpot: #815422;
+
+body {
+	color: #222;
+	font-size: em(16);
+	line-height: 1.6;
+}
+
+.euroJackpot {
+	.euroJackpot__tiers {
+		width: 100%;
+
+		color: #777;
+		font-size: em(14);
+		text-align: left;
+
+		tbody {
+			tr {
+				&:nth-child(odd) {
+					background-color: #f6f6f6;
+				}
+			}
+		}
+
+		td ~ td,
+		th ~ th {
+			text-align: right;
+		}
+
+		td,
+		th {
+			padding: ($small-spacing / 2) $small-spacing;
+		}
+
+		th {
+			color: #333;
+		}
+	}
+
+	.euroJackpot__balls {
+		overflow: hidden;
+
+		display: inline-block;
+
+		margin: 0 0 $small-spacing;
+		padding: 0;
+
+		list-style: none;
+
+		li {
+			$ball-width: 32px;
+			$ball-height: $ball-width;
+
+			display: block;
+
+			float: left;
+
+			width: $ball-width;
+			height: $ball-height;
+
+			border: 2px solid #ccc;
+			border-radius: 50%;
+
+			margin: 0 $small-spacing 0 0 0;
+
+			text-align: center;
+			line-height: $ball-height;
+
+			&.special {
+				border-color: $color-EuroJacpot;
+			}
+		}
+	}
+
+	.euroJackpot--color {
+		color: $color-EuroJacpot;
+	}
+
+	.container {
+		max-width: 960px;
+
+		margin: 0 auto;
+		padding: $base-spacing;
+	}
+
+	header {
+		margin: 0 0 $base-spacing;
+		padding: 0 0 $small-spacing;
+
+		border-bottom: 1px solid #ccc;
+
+		font-size: em(20);
+		font-weight: bold;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.euroJackpot {
+		text-align: center;
+
+		.euroJackpot__tiers {
+			font-size: em(12);
+		}
+
+		.euroJackpot__balls {
+			li {
+				$ball-width: 24px;
+				$ball-height: $ball-width;
+
+				width: $ball-width;
+				height: $ball-height;
+
+				margin: 0 ($small-spacing / 2) 0 0;
+
+				font-size: em(12);
+				line-height: $ball-height;
+			}
+		}
+
+		header {
+			font-size: em(18);
+		}
+	}
+}

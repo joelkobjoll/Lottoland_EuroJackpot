@@ -4,11 +4,11 @@
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "target": "ES5",
-        "out": "media/js/scripts.js",
+        "module": "commonjs",
+        "target": "es5",
         "sourceMap": true
     },
-    "include": [
-        "media/ts/**/*"
+    "exclude": [
+        "node_modules"
     ]
 }
