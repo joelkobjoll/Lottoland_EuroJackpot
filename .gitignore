@@ -2,5 +2,4 @@
 node_modules
 
 # Ignore generated files
-media/css
-media/js
+media/generated
