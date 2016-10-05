@@ -1,7 +1,7 @@
 export var getJSONP = function(url: any) {
 	let id: number = 0;
 
-	return new Promise(function(resolved, rejected) {
+	return new Promise(function(resolved: any, rejected: any) {
 		let callback = '_jsonp_' + id++;
 
 		(window as any)[callback] = function(data: any) {
