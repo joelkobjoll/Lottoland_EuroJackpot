@@ -42,7 +42,7 @@ export class Results {
 				let value = latest['odds'][key];
 
 				latest['oddsSorted'].push({
-					title: 'Tier' + results.number_roman(i),
+					title: 'Tier ' + results.number_roman(i),
 					prize: '€' + results.number_format((value.prize / 100).toFixed(2)),
 					winners: results.number_format(value.winners) + 'x'
 				});
@@ -51,7 +51,7 @@ export class Results {
 			let html: any = template(latest);
 
 			if(element) element.insertAdjacentHTML('beforeend', html)
-		}, function(error) {
+		}, function(error: any) {
 			console.log(error); 
 		});
 	}
